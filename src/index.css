@@ -3,23 +3,22 @@
 *::before {
   box-sizing: border-box;
 }
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-figure,
-picture {
-    margin: 0;
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
 }
 body,
 #root,
 .App {
+   margin: 0;
   width: 100%;
   min-height: 100vh;
   font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
 }
 img,
 picture {
