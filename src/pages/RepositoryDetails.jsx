@@ -6,9 +6,7 @@ export default function RepositoryDetails() {
   const location = useLocation();
   let { doc } = location.state;
  
-  let lastUpdate = new Date(doc.updated_at)
-  let day = lastUpdate.getDay()
-  let month =lastUpdate.getMonth() + 1
+  let lastUpdate = new Date(doc.updated_at).toDateString()
 
   return (
     <HelmetProvider>
@@ -65,9 +63,9 @@ export default function RepositoryDetails() {
             <p>{doc.forks} fork</p>
           </div>
           <p>{doc.open_issues} issues</p>
-          <p>
-            Updated on {day} {month}
-          </p>
+           <p>
+            Updated on {lastUpdate}
+          </p> 
         </div>
 
         {doc.description && <p>{doc.description}</p>}
