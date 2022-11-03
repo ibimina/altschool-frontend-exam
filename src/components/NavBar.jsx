@@ -6,7 +6,7 @@ export default function NavBar() {
 
   return (
     <header>
-      <h1>IB</h1>
+      <h1>IBrepolist</h1>
       <nav data-visible={isopen}>
         <ul>
           <li className="nav_list">
@@ -17,6 +17,16 @@ export default function NavBar() {
               onClick={() => setIsOpen(false)}
             >
               home
+            </NavLink>
+          </li>
+          <li className="nav_list">
+            <NavLink
+              to="/repositories"
+              className="nav_link"
+              end
+              onClick={() => setIsOpen(false)}
+            >
+              repositories
             </NavLink>
           </li>
           <li className="nav_list">
