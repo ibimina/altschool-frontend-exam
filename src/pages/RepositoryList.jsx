@@ -20,7 +20,7 @@ export default function RepositoryList() {
           <meta name="description" content="list of ibimina repositories" />
         </Helmet>
         <NavBar />
-        <h2 className="padd">Repository</h2>
+        <h2 className="padd">Repositories</h2>
         <div className="repolist_container padd">
           {loading && <p className="loading">loading</p>}
 
