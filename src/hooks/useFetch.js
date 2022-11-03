@@ -15,7 +15,6 @@ const fetchReducer = (state, action) => {
 };
 export default function useFetch(url) {
 
-
   const [state, dispatch] = useReducer(fetchReducer, initial);
   const errorhook = useErrorHandler();
 
@@ -26,9 +25,11 @@ export default function useFetch(url) {
         dispatch({ type: "LOADING", payload: true });
 
         const res = await fetch(url,{signal:abortConst.signal});
+     
         if (!res.ok) {
           throw new Error(res.statusText);
         }
+
         const data = await res.json();
         dispatch({ type: "SETDATA", payload: data });
       } catch (error) {
