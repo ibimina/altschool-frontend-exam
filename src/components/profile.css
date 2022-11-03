@@ -3,7 +3,8 @@
   text-align: center;
 }
 .profile_container {
-  margin: 1em 0;
+  margin: 2em 0;
+  padding:0 2em;
 }
 .profile {
   display: flex;
@@ -36,4 +37,10 @@
   border-radius: 10px;
   padding: 0.2em 0.8em;
   font-size: 13px;
+}
+.icon-div{
+  gap:.5em;
+}
+.icon{
+  width:20px;
 }
