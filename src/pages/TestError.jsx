@@ -1,6 +1,7 @@
 import{ useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Footer, NavBar } from "../components";
+import {HelmetProvider,Helmet} from"react-helmet-async";
 import ErrorFallBack from "./ErrorFallBack";
 
 export default function TestError() {
@@ -12,7 +13,7 @@ export default function TestError() {
       return    <p className="hello">Hello {user} </p>    
          };
         }
-  console.log(user);
+
   return (
     <>
       <HelmetProvider>
