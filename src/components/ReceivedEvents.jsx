@@ -1,6 +1,7 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 import { formatDistanceStrict } from "date-fns";
+import Loading from "./Loading";
 export default function ReceivedEvents() {
   const { state } = useFetch(
     `https://api.github.com/users/ibimina/received_events?per_page=8&&page=1`
@@ -12,13 +13,7 @@ export default function ReceivedEvents() {
     <div className="events">
       <h3 className="bio">Explore</h3>
       {loading && (
-        <div className="loading">
-          <img
-            src="/assets/icons8-preloader-64.png"
-            alt="loading icon"
-            className="load_img"
-          />
-        </div>
+       <Loading/>
       )}
       {docs &&
         docs.map((doc) => (

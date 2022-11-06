@@ -1,17 +1,12 @@
 import React from "react";
+import Loading from "./Loading";
 import "./profile.css";
 
 export default function Profile({ docs, loading }) {
   return (
     <>
       {loading && (
-        <div className="loading">
-          <img
-            src="/assets/icons8-preloader-64.png"
-            alt="loading icon"
-            className="load_img"
-          />
-        </div>
+   <Loading/>
       )}
       {docs && (
         <div className="profile_container">

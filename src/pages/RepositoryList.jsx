@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import { Link, Outlet } from "react-router-dom";
-import { Footer, NavBar } from "../components";
+import { Footer, Loading, NavBar } from "../components";
 import useFetch from "../hooks/useFetch";
 import "./repositorylist.css";
 
@@ -23,13 +23,7 @@ export default function RepositoryList() {
         <h2 className="padd">Repositories</h2>
         <div className="repolist_container padd">
           {loading && (
-            <div className="loading">
-              <img
-                src="/assets/icons8-preloader-64.png"
-                alt="loading icon"
-                className="load_img"
-              />
-            </div>
+           <Loading/>
           )}
 
           <div className="repo">
