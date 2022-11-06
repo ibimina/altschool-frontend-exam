@@ -143,6 +143,9 @@ footer {
   border-radius: 10px;
   margin-bottom: 1em;
 }
+.bold{
+  font-weight:700;
+}
 .space-bt {
   display: flex;
   flex-wrap: wrap;
