@@ -1,104 +1,159 @@
-.padd{
+.padd {
   padding: 1em;
 }
 .repository {
   font-weight: 900;
   padding: 1em 0;
-  border-bottom:1px solid hsl(0, 2%, 73%);
+  border-bottom: 1px solid hsl(0, 2%, 73%);
 }
-.outlet_link{
+.outlet_link {
   color: hsl(212, 79%, 39%);
 }
-.outlet_link:hover{
+.outlet_link:hover {
   color: rgb(186, 186, 238);
 }
-.outlet_link:active,.outlet_link:focus{
-    color: blue;
-    text-decoration: underline;
+.outlet_link:active,
+.outlet_link:focus {
+  color: blue;
+  text-decoration: underline;
 }
-.repo_de{
-max-width:500px;
+.repo_de {
+  max-width: 500px;
 }
-.btn_wrap{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: .5em;
-    margin: 2em 0;
-    padding:0 1em;
+.repo_bg{
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
 }
-.btn{
-    border: 0;
-    border-radius: 5px;
-    padding: .5em 1.5em;
-    cursor: pointer;
+.btn_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  margin: 2em 0;
+  padding: 0 1em;
 }
-.btn:hover{
-   color: rgb(152, 152, 185); 
+.btn {
+  border: 0;
+  border-radius: 5px;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
 }
-.btn:active,.btn:focus{
-border: 1px solid rgb(153, 153, 238);
-color: blue;
+.btn:hover {
+  color: rgb(152, 152, 185);
 }
-.public{
-    border:1px solid gray;
-    padding: .2em .5em;
-    border-radius: 15px;
-    text-transform: capitalize;
+.btn:active,
+.btn:focus {
+  border: 1px solid rgb(153, 153, 238);
+  color: blue;
 }
-.gap{
-    gap: .2em;
-    margin-bottom: 0;
+.public {
+  border: 1px solid gray;
+  padding: 0.2em 0.5em;
+  border-radius: 15px;
+  text-transform: capitalize;
 }
-.star{
-    width: 20px;
+.gap {
+  gap: 0.2em;
+  margin-bottom: 0;
 }
-.no-space{
-margin-bottom: 0;
+.star {
+  width: 20px;
 }
-.space-btw{
-    justify-content: space-between;
-    flex-wrap: wrap;
+.no-space {
+  margin-bottom: 0;
 }
-.test{
+.space-btw {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.test {
   padding: 1em;
   max-width: 600px;
   margin: auto;
 }
-.title{
+.title {
   text-align: center;
   margin-bottom: 1em;
   font-weight: 700;
 }
-input{
+input {
   display: block;
   margin-bottom: 2em;
-  padding:.5em 1em;
+  padding: 0.5em 1em;
   width: 100%;
   border-radius: 10px;
 }
-.fallback{
+.fallback {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 1em;
 }
-footer{
-  text-align:center;
+footer {
+  text-align: center;
 }
-.repo_avatar{
-  max-width:30px;
-  border-radius:50%;
+.repo_avatar {
+  max-width: 30px;
+  border-radius: 30%;
 }
-.accent{
-  color:black;
+.accent {
+  color: black;
   text-decoration: none;
 }
-@media (min-width:40rem) {
-  .repolist_container{
+.events {
+  padding: 1em;
+}
+.event_img {
+  max-width: 60px;
+  border-radius: 50%;
+}
+.con {
+  position: relative;
+}
+.st {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: -.5em;
+  background-color: white;
+  border-radius: 50%;
+ max-width: 30px;
+  border: 2px solid white;
+}
+.create{
+ content: url("./assets/icons8-repository.png");
+}
+.watch{
+ content: url("./assets/icons8-event-star.png");
+}
+.fork{
+  content: url("./assets/icons8-forked.png");
+}
+.card {
+  padding: 1em;
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+@media (min-width: 40rem) {
+  .repolist_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3em;
   }
-  .repo{
+  .repo {
     grid-column: 1;
   }
+
+ 
+}
+@media (min-width:60rem) {
+    .home_content{
+    display: flex;
+  align-items: flex-start;
+}
 }

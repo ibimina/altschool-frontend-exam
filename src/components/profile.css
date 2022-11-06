@@ -1,18 +1,38 @@
 .loading {
   min-height: 50vh;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .profile_container {
-  margin: 2em 0;
-  padding:0 2em;
+  /* min-height: 80vh; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: hsl(200, 18%, 97%);
 }
 .profile {
   display: flex;
   align-items: center;
   gap: 1em;
   margin-bottom: 1em;
+  /* background-color: hsl(200, 18%, 97%); */
 }
-
+.profile_content{
+/* border-radius: 10px; */
+/* background-color: hsl(200, 18%, 97%); */
+padding: 1em;
+margin: 1em;
+}
 .avatar {
   border-radius: 50%;
   max-width: 100px;
@@ -31,6 +51,7 @@
   align-items: center;
   gap: 1em;
   margin-bottom: 1em;
+  flex-wrap: wrap;
 }
 .repo_no {
   background-color: grey;
@@ -38,9 +59,9 @@
   padding: 0.2em 0.8em;
   font-size: 13px;
 }
-.icon-div{
-  gap:.5em;
+.icon-div {
+  gap: 0.5em;
 }
-.icon{
-  width:20px;
+.icon {
+  width: 20px;
 }
