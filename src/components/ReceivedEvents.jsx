@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import useFetch from '../hooks/useFetch'
 import { formatDistanceStrict } from "date-fns";
-export default function ReceivedEvents({url}) {
+export default function ReceivedEvents() {
   const { state } = useFetch(
     `https://api.github.com/users/ibimina/received_events`
   );
