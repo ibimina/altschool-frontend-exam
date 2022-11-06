@@ -22,7 +22,15 @@ export default function RepositoryList() {
         <NavBar />
         <h2 className="padd">Repositories</h2>
         <div className="repolist_container padd">
-          {loading && <p className="loading">loading</p>}
+          {loading && (
+            <div className="loading">
+              <img
+                src="/assets/icons8-preloader-64.png"
+                alt="loading icon"
+                className="load_img"
+              />
+            </div>
+          )}
 
           <div className="repo">
             {docs &&
