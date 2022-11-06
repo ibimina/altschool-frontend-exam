@@ -1,12 +1,12 @@
-import React from 'react'
-import useFetch from '../hooks/useFetch'
+import React from "react";
+import useFetch from "../hooks/useFetch";
 import { formatDistanceStrict } from "date-fns";
 export default function ReceivedEvents() {
   const { state } = useFetch(
     `https://api.github.com/users/ibimina/received_events?per_page=8&&page=1`
   );
-const {loading,docs}=state
-console.log(docs)
+  const { loading, docs } = state;
+  console.log(docs);
 
   return (
     <div className="events">
@@ -69,7 +69,7 @@ console.log(docs)
 
                 <div className="card">
                   <div className="flex">
-                             <p>{doc.repo.name}</p>
+                    <p>{doc.repo.name}</p>
                   </div>
                 </div>
               </>
@@ -119,7 +119,6 @@ console.log(docs)
                       <img src={doc.actor.avatar_url} className="event_img" />
                       <span className="st colab"></span>
                     </div>
-
                     <p>{doc.actor.login}</p>
                     <p>added a collaborator</p>
                   </div>

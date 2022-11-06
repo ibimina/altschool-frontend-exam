@@ -1,8 +1,7 @@
 import React from "react";
 import "./profile.css";
 
-export default function Profile({docs,loading}) {
-
+export default function Profile({ docs, loading }) {
   return (
     <>
       {loading && (
@@ -90,7 +89,6 @@ export default function Profile({docs,loading}) {
             </p>
           </div>
         </div>
-
       )}
     </>
   );

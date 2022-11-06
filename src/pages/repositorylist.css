@@ -20,7 +20,7 @@
 .repo_de {
   max-width: 500px;
 }
-.repo_bg{
+.repo_bg {
   background-color: #fff;
   padding: 1em;
   border-radius: 5px;
@@ -118,22 +118,22 @@ footer {
   display: block;
   position: absolute;
   bottom: 0;
-  right: -.5em;
+  right: -0.5em;
   background-color: white;
   border-radius: 50%;
- max-width: 30px;
+  max-width: 30px;
   border: 2px solid white;
 }
-.create{
- content: url("./assets/icons8-repository.png");
+.create {
+  content: url("./assets/icons8-repository.png");
 }
-.watch{
- content: url("./assets/icons8-event-star.png");
+.watch {
+  content: url("./assets/icons8-event-star.png");
 }
-.fork{
+.fork {
   content: url("./assets/icons8-forked.png");
 }
-.colab{
+.colab {
   content: url("./assets/icons8-account-24.png");
 }
 .card {
@@ -142,12 +142,12 @@ footer {
   border-radius: 10px;
   margin-bottom: 1em;
 }
-.space-bt{
-  display:flex;
+.space-bt {
+  display: flex;
   flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 1em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
 }
 @media (min-width: 40rem) {
   .repolist_container {
@@ -158,14 +158,11 @@ margin-bottom: 1em;
   .repo {
     grid-column: 1;
   }
-
- 
 }
-@media (min-width:60rem) {
-    .home_content{
+@media (min-width: 60rem) {
+  .home_content {
     display: flex;
-  align-items: flex-start;
-justify-content:center;
-}
-
+    align-items: flex-start;
+    justify-content: center;
+  }
 }

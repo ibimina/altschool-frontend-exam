@@ -18,19 +18,18 @@ ul {
   margin-top: 1em;
   color: #ffff;
 }
-.nav_list{
-  margin-bottom: .5em;
+.nav_list {
+  margin-bottom: 0.5em;
 }
 .nav_link {
   color: #ffff;
   text-transform: capitalize;
-
 }
-.nav_link.active{
-color: hsl(214, 59%, 48%);
+.nav_link.active {
+  color: hsl(214, 59%, 48%);
 }
-.nav_link:hover{
-color: hsl(215, 25%, 76%);
+.nav_link:hover {
+  color: hsl(215, 25%, 76%);
 }
 .mobile_navigation {
   grid-column: 4;

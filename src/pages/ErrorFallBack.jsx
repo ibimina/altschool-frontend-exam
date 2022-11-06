@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function ErrorFallBack({error,resetErrorBoundary}) {
+export default function ErrorFallBack({ error, resetErrorBoundary }) {
   return (
     <div role="alert" className="fallback">
       <img

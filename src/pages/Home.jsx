@@ -4,8 +4,8 @@ import useFetch from "../hooks/useFetch";
 
 export default function Home() {
   const url = "https://api.github.com/users/ibimina";
-    const { state } = useFetch(url)
-    const { loading, docs } = state;
+  const { state } = useFetch(url);
+  const { loading, docs } = state;
 
   return (
     <>
@@ -17,7 +17,7 @@ export default function Home() {
         <NavBar />
         <div className="home_content">
           <Profile docs={docs} loading={loading} />
-          <ReceivedEvents  />
+          <ReceivedEvents />
         </div>
         <Footer />
       </HelmetProvider>

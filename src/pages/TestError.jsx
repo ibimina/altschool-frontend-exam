@@ -1,18 +1,18 @@
-import{ useState } from "react";
+import { useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Footer, NavBar } from "../components";
-import {HelmetProvider,Helmet} from"react-helmet-async";
+import { HelmetProvider, Helmet } from "react-helmet-async";
 import ErrorFallBack from "./ErrorFallBack";
 
 export default function TestError() {
   const [user, setUser] = useState("");
   const NameBug = ({ user }) => {
     if (user === "ibimina") {
-       throw new Error("User triggered an error ");
+      throw new Error("User triggered an error ");
     } else {
-      return    <p className="hello">Hello {user}</p>    
-         };
-        }
+      return <p className="hello">Hello {user}</p>;
+    }
+  };
 
   return (
     <>
@@ -26,9 +26,10 @@ export default function TestError() {
         </Helmet>
         <NavBar />
         <div className="test">
-
           <h2 className="title">Let's Test your Error Boundary 🤔</h2>
-         <p className="bio">Do not enter "ibimina" as this will trigger an error</p>
+          <p className="bio">
+            Do not enter "ibimina" as this will trigger an error
+          </p>
           <input
             type="text"
             value={user}

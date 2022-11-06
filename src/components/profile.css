@@ -14,7 +14,6 @@
   }
 }
 .profile_container {
-
   display: flex;
   margin: 1em;
 
@@ -27,9 +26,9 @@
   gap: 1em;
   margin-bottom: 1em;
 }
-.profile_content{
-padding: 1em;
-margin: 1em;
+.profile_content {
+  padding: 1em;
+  margin: 1em;
 }
 .avatar {
   border-radius: 50%;
