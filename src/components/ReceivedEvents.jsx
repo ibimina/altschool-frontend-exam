@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useFetch from '../hooks/useFetch'
 import { formatDistanceStrict } from "date-fns";
 export default function ReceivedEvents() {
   const { state } = useFetch(
-    `https://api.github.com/users/ibimina/received_events`
+    `https://api.github.com/users/ibimina/received_events?per_page=8&&page=1`
   );
 const {loading,docs}=state
 console.log(docs)
 
   return (
     <div className="events">
-      <h3>Explore</h3>
+      <h3 className="bio">Explore</h3>
       {loading && (
         <div className="loading">
           <img
@@ -25,19 +25,21 @@ console.log(docs)
           <div key={doc.id}>
             {doc.type === "CreateEvent" && (
               <>
-                <div className="flex">
-                  <div className="con">
-                    <img src={doc.actor.avatar_url} className="event_img" />
-                    <span className="st create"></span>
+                <div className="space-bt">
+                  <div className="flex">
+                    <div className="con">
+                      <img src={doc.actor.avatar_url} className="event_img" />
+                      <span className="st create"></span>
+                    </div>
+                    <p>{doc.actor.login}</p>
+                    <p>created a repository</p>
                   </div>
-                  <p>{doc.actor.login}</p>
-                  <p>created a repository</p>
                   <p>
-                    created{" "}
                     {formatDistanceStrict(new Date(), new Date(doc.created_at))}{" "}
                     ago
                   </p>
                 </div>
+
                 <div className="card">
                   <div className="flex">
                     <img src={doc.actor.avatar_url} className="repo_avatar" />
@@ -51,37 +53,44 @@ console.log(docs)
 
             {doc.type === "WatchEvent" && (
               <>
-                <div className="flex">
-                  <div className="con">
-                    <img src={doc.actor.avatar_url} className="event_img" />
-                    <span className="st watch"></span>
+                <div className="space-bt">
+                  <div className="flex">
+                    <div className="con">
+                      <img src={doc.actor.avatar_url} className="event_img" />
+                      <span className="st watch"></span>
+                    </div>
+                    <p>{doc.actor.login}</p>
+                    <p>starred a repository</p>
                   </div>
-
-                  <p>{doc.actor.login}</p>
-                  <p>starred a repository</p>
                   <p>
                     {formatDistanceStrict(new Date(), new Date(doc.created_at))}{" "}
                   </p>
                 </div>
+
                 <div className="card">
                   <div className="flex">
-                    <img src={doc.actor.avatar_url} className="repo_avatar" />
-                    <p>{doc.repo.name}</p>
+                             <p>{doc.repo.name}</p>
                   </div>
                 </div>
               </>
             )}
             {doc.type === "ForkEvent" && (
               <>
-                <div className="flex">
-                  <div className="con">
-                    <img src={doc.actor.avatar_url} className="event_img" />
-                    <span className="st fork"></span>
-                  </div>
+                <div className="space-bt">
+                  <div className="flex">
+                    <div className="con">
+                      <img src={doc.actor.avatar_url} className="event_img" />
+                      <span className="st fork"></span>
+                    </div>
 
-                  <p>{doc.actor.login}</p>
-                  <p>forked a repository</p>
+                    <p>{doc.actor.login}</p>
+                    <p>forked a repository</p>
+                  </div>
+                  <p>
+                    {formatDistanceStrict(new Date(), new Date(doc.created_at))}{" "}
+                  </p>
                 </div>
+
                 <div className="card">
                   <div className="flex">
                     <img src={doc.org.avatar_url} className="repo_avatar" />
@@ -104,29 +113,28 @@ console.log(docs)
             )}
             {doc.type === "MemberEvent" && (
               <>
-                <div className="flex">
-                  <div className="con">
-                    <img src={doc.actor.avatar_url} className="event_img" />
-                    <span className="st fork"></span>
-                  </div>
+                <div className="space-bt">
+                  <div className="flex">
+                    <div className="con">
+                      <img src={doc.actor.avatar_url} className="event_img" />
+                      <span className="st colab"></span>
+                    </div>
 
-                  <p>{doc.actor.login}</p>
-                  <p>added a collaborator</p>
+                    <p>{doc.actor.login}</p>
+                    <p>added a collaborator</p>
+                  </div>
+                  <p>
+                    {formatDistanceStrict(new Date(), new Date(doc.created_at))}{" "}
+                  </p>
                 </div>
                 <div className="card">
                   <div className="flex">
-                    <img src={doc.payload.member.avatar_url} className="repo_avatar" />
+                    <img
+                      src={doc.payload.member.avatar_url}
+                      className="repo_avatar"
+                    />
                     <p>{doc.repo.name}</p>
                   </div>
-
-                  {/* <p>
-                    created{" "}
-                    {formatDistanceStrict(
-                      new Date(),
-                      new Date(doc.payload.created_at)
-                    )}{" "}
-                    ago
-                  </p> */}
                 </div>
               </>
             )}
