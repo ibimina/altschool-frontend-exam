@@ -14,9 +14,10 @@
   }
 }
 .profile_container {
-  /* min-height: 80vh; */
+
   display: flex;
-  /* justify-content: center; */
+  margin: 1em;
+
   align-items: center;
   background-color: hsl(200, 18%, 97%);
 }
@@ -25,11 +26,8 @@
   align-items: center;
   gap: 1em;
   margin-bottom: 1em;
-  /* background-color: hsl(200, 18%, 97%); */
 }
 .profile_content{
-/* border-radius: 10px; */
-/* background-color: hsl(200, 18%, 97%); */
 padding: 1em;
 margin: 1em;
 }
@@ -50,7 +48,6 @@ margin: 1em;
   display: flex;
   align-items: center;
   gap: 1em;
-  margin-bottom: 1em;
   flex-wrap: wrap;
 }
 .repo_no {
