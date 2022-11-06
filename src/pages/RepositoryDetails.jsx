@@ -21,9 +21,8 @@ export default function RepositoryDetails() {
             <div className="flex no-space">
               <div>
                 <p>{doc.owner.login}</p>
-                <a href={doc.svn_url} target="_blank">
-                  {doc.name}
-                </a>
+                <p className="bold"> {doc.name}</p>
+                
               </div>
 
               <p className="public">{doc.visibility}</p>
