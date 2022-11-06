@@ -20,9 +20,11 @@ export default function RepositoryDetails() {
           <div className="flex space-btw">
             <div className="flex no-space">
               <div>
-                <p>{doc.owner.login}</p>
-                <p className="bold"> {doc.name}</p>
-                
+                <p className="bold">
+                  {" "}
+                  {doc.owner.login}
+                  /{doc.name}
+                </p>
               </div>
 
               <p className="public">{doc.visibility}</p>
@@ -120,8 +122,13 @@ export default function RepositoryDetails() {
             </>
           )}
 
-          <a href={doc.html_url} rel="noreferrer" target="_blank">
-            view repository on githbub
+          <a
+            href={doc.html_url}
+            rel="noreferrer"
+            target="_blank"
+            className="link"
+          >
+            View repository on githbub
           </a>
         </div>
       </div>
