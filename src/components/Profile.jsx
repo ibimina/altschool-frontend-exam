@@ -40,7 +40,7 @@ export default function Profile({docs,loading}) {
                 </a>
               </div>
             </div>
-            <div className="flex">
+            <div className="flex bio">
               <div className="flex icon-div">
                 <img
                   src="/assets/icons8-github.svg"
@@ -75,7 +75,7 @@ export default function Profile({docs,loading}) {
                 </a>
               </div>
             </div>
-            <div className="follower_container flex">
+            <div className="follower_container flex bio">
               <p>
                 <span>{docs.followers}</span> <span>followers</span>
               </p>
