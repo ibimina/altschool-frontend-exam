@@ -146,6 +146,13 @@ footer {
 .bold{
   font-weight:700;
 }
+.link{
+  font-weight: 600;
+  color: hsl(234, 85%, 60%);
+  margin-top: 1em;
+  display: block;
+
+}
 .space-bt {
   display: flex;
   flex-wrap: wrap;
