@@ -27,7 +27,10 @@ ul {
 
 }
 .nav_link.active{
-color: hsl(0, 83%, 95%);
+color: hsl(214, 59%, 48%);
+}
+.nav_link:hover{
+color: hsl(215, 25%, 76%);
 }
 .mobile_navigation {
   grid-column: 4;
