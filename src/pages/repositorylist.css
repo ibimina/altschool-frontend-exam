@@ -126,16 +126,16 @@ footer {
   border: 2px solid white;
 }
 .create {
-  content: url("./assets/icons8-repository.png");
+  content: url("/assets/icons8-repository.png");
 }
 .watch {
-  content: url("./assets/icons8-event-star.png");
+  content: url("/assets/icons8-event-star.png");
 }
 .fork {
-  content: url("./assets/icons8-forked.png");
+  content: url("/assets/icons8-forked.png");
 }
 .colab {
-  content: url("./assets/icons8-account-24.png");
+  content: url("/assets/icons8-account-24.png");
 }
 .card {
   padding: 1em;
