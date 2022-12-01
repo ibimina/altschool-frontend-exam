@@ -7,7 +7,6 @@ export default function ReceivedEvents() {
     `https://api.github.com/users/ibimina/received_events?per_page=8&&page=1`
   );
   const { loading, docs } = state;
-  console.log(docs);
 
   return (
     <div className="events">
