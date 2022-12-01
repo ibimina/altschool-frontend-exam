@@ -86,9 +86,9 @@ export default function ReceivedEvents() {
                   </p>
                 </div>
 
-                <div className="card">
+                <div className="card space-bt">
                   <div className="flex">
-                    <img src={doc.org.avatar_url} className="repo_avatar" />
+                    <img src={doc.avatar_url} className="repo_avatar" />
                     <p>{doc.repo.name}</p>
                   </div>
                   <div className="flex gap">
