@@ -175,6 +175,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: flex-start;
+    position: relative;
   }
   .events{
     grid-column: 2;
