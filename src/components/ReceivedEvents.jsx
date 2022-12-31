@@ -2,18 +2,17 @@ import React from "react";
 import useFetch from "../hooks/useFetch";
 import { formatDistanceStrict } from "date-fns";
 import Loading from "./Loading";
+import Event from "./Event";
 export default function ReceivedEvents() {
   const { state } = useFetch(
     `https://api.github.com/users/ibimina/received_events?per_page=8&&page=1`
   );
   const { loading, docs } = state;
-
+console.log(docs)
   return (
     <div className="events">
       <h3 className="bio">Explore</h3>
-      {loading && (
-       <Loading/>
-      )}
+      {loading && <Loading />}
       {docs &&
         docs.map((doc) => (
           <div key={doc.id}>
@@ -22,26 +21,40 @@ export default function ReceivedEvents() {
                 <div className="space-bt">
                   <div className="flex">
                     <div className="con">
-                      <img src={doc.actor.avatar_url} className="event_img" />
-                      <span className="st create"></span>
+                      <a
+                        href={`https://github.com/${doc.actor.login}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src={doc.actor.avatar_url} className="event_img" />
+                        <span className="st create"></span>
+                      </a>
                     </div>
-                    <p>{doc.actor.login}</p>
-                    <p>created a repository</p>
+                    <p>
+                      <a
+                        href={`https://github.com/${doc.actor.login}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {doc.actor.login}{" "}
+                      </a>{" "}
+                      created a repository{" "}
+                      <a
+                        href={`https://github.com/${doc.repo.name}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {doc.repo.name}
+                      </a>{" "}
+                      {formatDistanceStrict(
+                        new Date(),
+                        new Date(doc.created_at)
+                      )}{" "}
+                      ago
+                    </p>
                   </div>
-                  <p>
-                    {formatDistanceStrict(new Date(), new Date(doc.created_at))}{" "}
-                    ago
-                  </p>
                 </div>
-
-                <div className="card">
-                  <div className="flex">
-                    <img src={doc.actor.avatar_url} className="repo_avatar" />
-                    <p>{doc.repo.name}</p>
-                  </div>
-
-                  <p>{doc.payload.description}</p>
-                </div>
+                <Event url={doc.repo.url} doc={doc} />
               </>
             )}
 
@@ -50,8 +63,15 @@ export default function ReceivedEvents() {
                 <div className="space-bt">
                   <div className="flex">
                     <div className="con">
-                      <img src={doc.actor.avatar_url} className="event_img" />
-                      <span className="st watch"></span>
+                      <a
+                        href={`https://github.com/${doc.actor.login}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src={doc.actor.avatar_url} className="event_img" />
+                        <span className="st watch"></span>
+                      </a>
+                      
                     </div>
                     <p>{doc.actor.login}</p>
                     <p>starred a repository</p>
