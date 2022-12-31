@@ -160,6 +160,16 @@ footer {
   align-items: center;
   margin-bottom: 1em;
 }
+.star-bor{
+  border: 1px solid gray;
+  padding: .4em 1em;
+  border-radius: 8px;
+justify-content: space-between;
+}
+.flexx{
+  display: flex;
+  justify-content: space-between;
+}
 @media (min-width: 40rem) {
   .repolist_container {
     display: grid;
