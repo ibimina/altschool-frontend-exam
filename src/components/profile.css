@@ -63,6 +63,9 @@
 }
 @media (min-width:60rem) {
  .profile_container {
-  position: fixed;
+  position: sticky;
+  top: 1em;
+  left: 1em;
+  margin: 1em 0;
  } 
 }
