@@ -16,9 +16,9 @@
 .profile_container {
   display: flex;
   margin: 1em;
-
   align-items: center;
   background-color: white;
+  max-width: 450px;
 }
 .profile {
   display: flex;
