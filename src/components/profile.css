@@ -61,3 +61,8 @@
 .icon {
   width: 20px;
 }
+@media (min-width:60rem) {
+ .profile_container {
+  position: fixed;
+ } 
+}
