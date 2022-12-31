@@ -172,7 +172,8 @@ footer {
 }
 @media (min-width: 60rem) {
   .home_content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     align-items: flex-start;
   }
 }
