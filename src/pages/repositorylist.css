@@ -176,4 +176,8 @@ footer {
     grid-template-columns: 1fr 2fr;
     align-items: flex-start;
   }
+  .events{
+    grid-column: 2;
+    padding: 1em 2em 1em 3em;
+  }
 }
