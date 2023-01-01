@@ -47,7 +47,14 @@
   display: flex;
   align-items: center;
   gap: 1em;
-  flex-wrap: wrap;
+}
+.small{
+  font-size: 13px;
+}
+.f{
+  display: flex;
+  gap: .3em;
+  align-items: center;
 }
 .repo_no {
   background-color: grey;
@@ -66,6 +73,5 @@
   position: sticky;
   top: 1em;
   left: 1em;
-  margin: 1em 0;
  } 
 }
