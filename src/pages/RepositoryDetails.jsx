@@ -2,6 +2,7 @@ import React from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { formatDistanceStrict } from "date-fns";
+import Language from "../components/Language";
 export default function RepositoryDetails() {
   const location = useLocation();
   let { doc } = location.state;
@@ -69,59 +70,7 @@ export default function RepositoryDetails() {
             <p>{doc.open_issues} issues</p>
             <p>Updated {lastUpdate} ago</p>
           </div>
-
-          {doc.language === "CSS" && (
-            <>
-              <p className="flex">
-                {" "}
-                <span
-                  style={{
-                    backgroundColor: "purple",
-                    width: "15px",
-                    borderRadius: "50%",
-                    height: "15px",
-                    display: "inline-block",
-                  }}
-                ></span>
-                {doc.language}
-              </p>
-            </>
-          )}
-          {doc.language === "Javascript" && (
-            <>
-              <p className="flex">
-                {" "}
-                <span
-                  style={{
-                    backgroundColor: "yellow",
-                    width: "15px",
-                    borderRadius: "50%",
-                    height: "15px",
-                    display: "inline-block",
-                  }}
-                ></span>
-                {doc.language}
-              </p>
-            </>
-          )}
-          {doc.language === "HTML" && (
-            <>
-              <p className="flex">
-                {" "}
-                <span
-                  style={{
-                    backgroundColor: "red",
-                    width: "15px",
-                    borderRadius: "50%",
-                    height: "15px",
-                    display: "inline-block",
-                  }}
-                ></span>
-                {doc.language}
-              </p>
-            </>
-          )}
-
+       <Language language={doc.language}/>
           <a
             href={doc.html_url}
             rel="noreferrer"
