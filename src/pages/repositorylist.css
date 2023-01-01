@@ -59,7 +59,7 @@
   margin-bottom: 0;
 }
 .star {
-  width: 20px;
+  width: 16px;
 }
 .no-space {
   margin-bottom: 0;
@@ -109,7 +109,7 @@ footer {
   padding: 1em;
 }
 .event_img {
-  max-width: 60px;
+  max-width: 40px;
   border-radius: 50%;
 }
 .con {
@@ -125,33 +125,20 @@ footer {
   max-width: 30px;
   border: 2px solid white;
 }
-.create {
-  content: url("/assets/icons8-repository.png");
-}
-.watch {
-  content: url("/assets/icons8-event-star.png");
-}
-.fork {
-  content: url("/assets/icons8-forked.png");
-}
-.colab {
-  content: url("/assets/icons8-account-24.png");
-}
 .card {
   padding: 1em;
   background-color: white;
   border-radius: 10px;
   margin-bottom: 1em;
 }
-.bold{
-  font-weight:700;
+.bold {
+  font-weight: 700;
 }
-.link{
+.link {
   font-weight: 600;
   color: hsl(234, 85%, 60%);
   margin-top: 1em;
   display: block;
-
 }
 .space-bt {
   display: flex;
@@ -160,15 +147,23 @@ footer {
   align-items: center;
   margin-bottom: 1em;
 }
-.star-bor{
+.star-bor {
   border: 1px solid gray;
-  padding: .4em 1em;
+  padding: 0.2em 0.5em;
   border-radius: 8px;
-justify-content: space-between;
+  justify-content: space-between;
 }
-.flexx{
+.flexx {
   display: flex;
   justify-content: space-between;
+}
+.event_card {
+  border-bottom: 1px solid rgb(219, 216, 216);
+  margin-bottom: 1em;
+}
+.event_desc {
+  margin: 0.5em 0;
+  font-size: 14px;
 }
 @media (min-width: 40rem) {
   .repolist_container {
@@ -179,6 +174,15 @@ justify-content: space-between;
   .repo {
     grid-column: 1;
   }
+  .repo_de {
+    position: relative;
+    top: 15%;
+    right: -5%;
+  }
+  .repo_bg {
+    position: sticky;
+    top: 10em;
+  }
 }
 @media (min-width: 60rem) {
   .home_content {
@@ -186,9 +190,10 @@ justify-content: space-between;
     grid-template-columns: 1fr 2fr;
     align-items: flex-start;
     position: relative;
+    margin: 1em;
   }
-  .events{
+  .events {
     grid-column: 2;
-    padding: 1em 2em 1em 3em;
+    padding-left: 1em;
   }
 }
