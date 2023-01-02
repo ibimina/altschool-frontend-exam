@@ -1,14 +1,33 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.css";
 export default function NavBar() {
   const [isopen, setIsOpen] = useState(false);
-
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate()
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    navigate(`/search?users=${search}`)
+    setSearch("")
+  }
   return (
     <header>
       <h1>IBrepolist</h1>
       <nav data-visible={isopen}>
         <ul>
+          <li>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="search"
+                name="search"
+                id=""
+                placeholder="Search  User..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                required
+              />
+            </form>
+          </li>
           <li className="nav_list">
             <NavLink
               to="/"
