@@ -7,6 +7,7 @@ header {
 }
 h1 {
   grid-column: 1;
+  font-size: 20px;
 }
 nav {
   grid-row: 2;
@@ -19,7 +20,9 @@ ul {
   color: #ffff;
 }
 .nav_list {
+  padding-bottom: .5em;
   margin-bottom: 0.5em;
+  border-bottom: 1px solid rgb(252, 241, 241);
 }
 .nav_link {
   color: #ffff;
@@ -53,20 +56,31 @@ nav[data-visible="true"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-inline: 2.5em;
   }
   .mobile_navigation {
     display: none;
   }
   nav {
     display: block;
+    width: 50%;
   }
   ul {
     margin-top: 0;
     display: flex;
-    gap: 1em;
+    gap: 3em;
     align-items: center;
   }
   .nav_link {
     cursor: pointer;
+  
+  }
+  .nav_list{
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  input{
+    margin-bottom: 0;
   }
 }
