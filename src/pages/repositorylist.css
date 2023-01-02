@@ -1,3 +1,6 @@
+.home_content{
+  padding: 1em;
+}
 .padd {
   padding: 1em;
 }
@@ -156,6 +159,7 @@ footer {
 .flexx {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .event_card {
   border-bottom: 1px solid rgb(219, 216, 216);
@@ -164,6 +168,9 @@ footer {
 .event_desc {
   margin: 0.5em 0;
   font-size: 14px;
+}
+.userlink{
+  display: block;
 }
 @media (min-width: 40rem) {
   .repolist_container {
