@@ -68,7 +68,7 @@ nav[data-visible="true"] {
   ul {
     margin-top: 0;
     display: flex;
-    gap: 3em;
+    gap: 2em;
     align-items: center;
   }
   .nav_link {
