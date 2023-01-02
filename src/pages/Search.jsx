@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import NavBar from '../components/NavBar'
 import useFetch from '../hooks/useFetch'
 import"./user.css"
 export default function Search() {
@@ -10,15 +11,20 @@ export default function Search() {
     const {state}=useFetch(url)
     const{loading,docs}=state
   return (
-    <div className='slide'>
-      {docs.items &&
-        docs?.items.map((user) => (
-          <li key={user.login} className="user_card">
-            <img src={user.avatar_url} alt=""  className='usercard_img'/>
-            <p>{user.login}</p>    
-            <Link to={`/${user.login}`} className="more">more</Link>
-          </li>
-        ))}
-    </div>
+    <>
+    <NavBar/>
+      <div className="slide">
+        {docs.items &&
+          docs?.items.map((user) => (
+            <li key={user.login} className="user_card">
+              <img src={user.avatar_url} alt="" className="usercard_img" />
+              <p>{user.login}</p>
+              <Link to={`/${user.login}`} className="more">
+                more
+              </Link>
+            </li>
+          ))}
+      </div>
+    </>
   );
 }

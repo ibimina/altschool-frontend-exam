@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import NavBar from '../components/NavBar';
 import UserRepo from '../components/UserRepo';
 import useFetch from '../hooks/useFetch';
 import "./user.css"
@@ -10,6 +11,7 @@ export default function User() {
       const{docs,loading}=state
   return (
     <div>
+      <NavBar/>
       <div className="user_bio">
         <img src={docs.avatar_url} alt="" className="user_img" />
         <div className="bio">
