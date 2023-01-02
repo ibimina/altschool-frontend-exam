@@ -190,6 +190,9 @@ footer {
     position: sticky;
     top: 10em;
   }
+    input{
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 60rem) {
   .home_content {

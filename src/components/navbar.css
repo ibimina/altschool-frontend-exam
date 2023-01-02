@@ -63,7 +63,7 @@ nav[data-visible="true"] {
   }
   nav {
     display: block;
-    width: 50%;
+    width: 60%;
   }
   ul {
     margin-top: 0;
@@ -78,9 +78,6 @@ nav[data-visible="true"] {
   .nav_list{
     border-bottom: 0;
     padding-bottom: 0;
-    margin-bottom: 0;
-  }
-  input{
     margin-bottom: 0;
   }
 }
