@@ -1,0 +1,19 @@
+.language_color {
+  width: 15px;
+  border-radius: 50%;
+  height: 15px;
+  display: inline-block;
+}
+.css {
+    
+  background-color: purple;
+}
+.javascript {
+  background-color: yellow;
+}
+.html {
+  background-color: red;
+}
+.typescript {
+  background-color: blue;
+}
