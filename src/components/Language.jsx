@@ -3,7 +3,7 @@ import"./language.css"
 export default function Language({language}) {
   return (
     <>
-      <p className="f small">
+      <p className="language_flex language_text">
         {" "}
         <span
           className={`language_color ${language === "CSS"
