@@ -14,6 +14,10 @@ nav {
   grid-column: 1/4;
   display: none;
 }
+nav[data-visible="true"] {
+  display: block;
+}
+
 ul {
   padding: 0;
   margin-top: 1em;
@@ -48,9 +52,7 @@ ul {
 .open {
   background-image: url("/assets/icon-close.svg");
 }
-nav[data-visible="true"] {
-  display: block;
-}
+
 @media (min-width: 40rem) {
   header {
     display: flex;
@@ -61,9 +63,10 @@ nav[data-visible="true"] {
   .mobile_navigation {
     display: none;
   }
-  nav {
-    display: block;
-    width: 60%;
+  nav[data-visible="true"] {
+    display: flex;
+    align-items: center;
+    gap: 1em;
   }
   ul {
     margin-top: 0;
@@ -73,7 +76,6 @@ nav[data-visible="true"] {
   }
   .nav_link {
     cursor: pointer;
-  
   }
   .nav_list{
     border-bottom: 0;

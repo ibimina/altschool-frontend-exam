@@ -14,20 +14,18 @@ export default function NavBar() {
     <header>
       <h1>IBrepolist</h1>
       <nav data-visible={isopen}>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            name="search"
+            id=""
+            placeholder="Search  User..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            required
+          />
+        </form>
         <ul>
-          <li>
-            <form onSubmit={handleSubmit}>
-              <input
-                type="search"
-                name="search"
-                id=""
-                placeholder="Search  User..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                required
-              />
-            </form>
-          </li>
           <li className="nav_list">
             <NavLink
               to="/"

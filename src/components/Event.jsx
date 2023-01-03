@@ -69,8 +69,7 @@ export default function Event({ url, doc,text }) {
               alt="star icon"
               className="star"
             />{" "}
-            {docs.stargazers_count > 0?" Starred":"Star"}
-           
+            <p className="small">{docs.stargazers_count > 0 ? " Starred" : "Star"}</p>
           </div>
         </div>
         {docs.description !== null && (
