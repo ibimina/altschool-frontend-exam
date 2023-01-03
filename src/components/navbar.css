@@ -63,7 +63,7 @@ ul {
   .mobile_navigation {
     display: none;
   }
-  nav[data-visible="true"] {
+  nav[data-visible="true"],nav {
     display: flex;
     align-items: center;
     gap: 1em;
