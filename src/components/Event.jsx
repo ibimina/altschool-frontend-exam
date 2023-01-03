@@ -59,17 +59,19 @@ export default function Event({ url, doc,text }) {
           <a href={docs.html_url} target="_blank" rel="noopener noreferrer">
             {doc.repo.name}
           </a>
-          {docs.stargazers_count > 0 && (
-            <div className="flex star-bor">
-              <img src="/assets/star.png" alt="" className="star" /> Starred
-            </div>
-          )}
-          {docs.stargazers_count == 0 && (
-            <div className="flex star-bor">
-              <img src="/assets/icons8-bg-star.png" alt="" className="star" />{" "}
-              Star
-            </div>
-          )}
+          <div className="flex star-bor">
+            <img
+              src={
+                docs.stargazers_count > 0
+                  ? "/assets/star.png"
+                  : "/assets/icons8-bg-star.png"
+              }
+              alt="star icon"
+              className="star"
+            />{" "}
+            {docs.stargazers_count > 0?" Starred":"Star"}
+           
+          </div>
         </div>
         {docs.description !== null && (
           <p className="event_desc">{docs.description}</p>
