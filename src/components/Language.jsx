@@ -3,21 +3,25 @@ import"./language.css"
 export default function Language({language}) {
   return (
     <>
-      <p className="language_flex language_text">
-        {" "}
-        <span
-          className={`language_color ${language === "CSS"
-              ? "css"
-              : language === "JavaScript"
-              ? "javascript"
-              : language === "HTML"
-              ? "html"
-              : language === "TypeScript"
-              ?"typescript":
-              ""}`}
-        ></span>
-        {language}
-      </p>
+      {language !== null && (
+        <p className="language_flex language_text">
+          {" "}
+          <span
+            className={`${
+              language === "CSS"
+                ? "language_color css"
+                : language === "JavaScript"
+                ? "language_color javascript"
+                : language === "HTML"
+                ? "language_color html"
+                : language === "TypeScript"
+                ? "language_color typescript"
+                : null
+            }`}
+          ></span>
+          {language}
+        </p>
+      )}
     </>
   );
 }
