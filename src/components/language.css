@@ -17,3 +17,11 @@
 .typescript {
   background-color: blue;
 }
+.language_text{
+    font-size: smaller;
+}
+.language_flex{
+    display: flex;
+    align-items: center;
+    gap: .4em;
+}
