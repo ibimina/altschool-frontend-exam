@@ -1,13 +1,9 @@
 import React from "react";
-import Loading from "./Loading";
 import "./profile.css";
 
-export default function Profile({ docs, loading }) {
+export default function Profile({ docs }) {
   return (
     <>
-      {loading && (
-   <Loading/>
-      )}
       {docs && (
         <div className="profile_container">
           <div className="profile_content">
