@@ -1,6 +1,10 @@
 .home_content{
   padding: 1em;
 }
+.btn_con{
+  display: flex;
+  gap: .5em;
+}
 .padd {
   padding: 1em;
 }
