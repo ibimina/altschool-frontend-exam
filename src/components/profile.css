@@ -17,6 +17,8 @@
   background-color: white;
   max-width: 450px;
   padding: 1em;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5);
 }
 .profile {
   display: flex;
