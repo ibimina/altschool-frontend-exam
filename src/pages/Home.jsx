@@ -14,9 +14,9 @@ export default function Home() {
           <title>Ibimina Github profile</title>
           <meta name="description" content="Github profile" />
         </Helmet>
-        <NavBar />
+        <NavBar />       
         <div className="home_content">
-          <Profile docs={docs} loading={loading} />
+          <Profile docs={docs}/>
           <ReceivedEvents />
         </div>
         <Footer />
