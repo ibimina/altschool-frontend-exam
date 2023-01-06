@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { Footer } from '../components'
 import NavBar from '../components/NavBar'
 import useFetch from '../hooks/useFetch'
 import"./user.css"
@@ -10,6 +11,16 @@ export default function Search() {
     let url = `https://api.github.com/search/users?q=${search}`;
     const {state}=useFetch(url)
     const{loading,docs}=state
+    if (docs?.items<1) {
+      return (
+        <>
+          <NavBar />
+          <p className='nousers'>No users found</p>
+          <Footer />
+        </>
+      );
+    
+    }
   return (
     <>
     <NavBar/>
