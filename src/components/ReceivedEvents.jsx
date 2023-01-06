@@ -17,29 +17,37 @@ export default function ReceivedEvents() {
       {docs &&
         docs.map((doc) => (
           <div key={doc.id} className="event_card">
-              <Event
-                url={doc.repo.url}
-                doc={doc}
-                text={
-                  doc.type === "CreateEvent"
-                    ? "created a repository"
-                    : doc.type === "WatchEvent"
-                    ? "starred a repository"
-                    : doc.type === "ForkEvent"
-                    ? "forked a repository"
-                    : doc.type === "MemberEvent"
-                    ? "added a collaborator"
-                    : ""
-                }
-              />
-             </div>
+            <Event
+              url={doc.repo.url}
+              doc={doc}
+              text={
+                doc.type === "CreateEvent"
+                  ? "created a repository"
+                  : doc.type === "WatchEvent"
+                  ? "starred a repository"
+                  : doc.type === "ForkEvent"
+                  ? "forked a repository"
+                  : doc.type === "MemberEvent"
+                  ? "added a collaborator"
+                  : ""
+              }
+            />
+          </div>
         ))}
-      <button disabled={page === 1} onClick={() => setPage((prev) => prev - 1)}>
-        {"<"}
-      </button>
-      <button disabled={page === 2} onClick={() => setPage((prev) => prev + 1)}>
-        {">"}
-      </button>
+      <div className="btn_con">
+        <button
+          disabled={page === 1}
+          onClick={() => setPage((prev) => prev - 1)}
+        >
+          {"<"}
+        </button>
+        <button
+          disabled={page === 2}
+          onClick={() => setPage((prev) => prev + 1)}
+        >
+          {">"}
+        </button>
+      </div>
     </div>
   );
 }
