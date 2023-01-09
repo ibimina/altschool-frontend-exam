@@ -3,7 +3,7 @@ import useFetch from "../hooks/useFetch";
 import { formatDistanceStrict, getDate, getMonth } from "date-fns";
 import Language from "./Language";
 
-export default function Event({ url, doc,text }) {
+export default function Event({ url, doc, text }) {
   const { state } = useFetch(url);
   const { loading, docs } = state;
   const months = [
@@ -20,7 +20,6 @@ export default function Event({ url, doc,text }) {
     "Nov",
     "Dec",
   ];
-
   return (
     <>
       <div className="space-bt">
@@ -69,30 +68,31 @@ export default function Event({ url, doc,text }) {
               alt="star icon"
               className="star"
             />{" "}
-            <p className="small">{docs.stargazers_count > 0 ? " Starred" : "Star"}</p>
+            <p className="small">
+              {docs.stargazers_count > 0 ? " Starred" : "Star"}
+            </p>
           </div>
         </div>
         {docs.description !== null && (
           <p className="event_desc">{docs.description}</p>
         )}
         <div className="flex">
-          {doc.type !== "CreateEvent" && (
-            <>
-              <Language language={docs.language} />
-              <div className="f">
-                <img src="/assets/icons8-bg-star.png" alt="" className="star" />
-                <p className="small">
-                  {docs.stargazers_count >= 1000
-                    ? (docs.stargazers_count / 1000).toFixed(1) + "k"
-                    : docs.stargazers_count > 10000
-                    ? (docs.stargazers_count / 10000).toFixed(1) + "k"
-                    : docs.stargazers_count > 100000
-                    ? (docs.stargazers_count / 100000).toFixed(1) + "k"
-                    : docs.stargazers_count}
-                </p>
-              </div>
-            </>
-          )}
+          <>
+            <Language language={docs.language} />
+            <div className="f">
+              <img src="/assets/icons8-bg-star.png" alt="" className="star" />
+              <p className="small">
+                {docs.stargazers_count >= 1000
+                  ? (docs.stargazers_count / 1000).toFixed(1) + "k"
+                  : docs.stargazers_count > 10000
+                  ? (docs.stargazers_count / 10000).toFixed(1) + "k"
+                  : docs.stargazers_count > 100000
+                  ? (docs.stargazers_count / 100000).toFixed(1) + "k"
+                  : docs.stargazers_count}
+              </p>
+            </div>
+          </>
+
           <p className="small">
             Updated {getDate(new Date(docs?.updated_at))}{" "}
             {months[getMonth(new Date(docs?.updated_at))]}

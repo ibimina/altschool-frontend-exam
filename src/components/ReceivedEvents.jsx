@@ -6,24 +6,23 @@ import Event from "./Event";
 export default function ReceivedEvents() {
   const [page, setPage] = useState(1);
   const { state } = useFetch(
-    `https://api.github.com/users/ibimina/received_events?per_page=10&&page=${page}`
+    `https://api.github.com/users/ibimina/received_events?page=${page}&per_page=30`
   );
   const { loading, docs } = state;
-
+console.log(docs)
   return (
     <div className="events">
       <h3 className="bio">Explore</h3>
       {loading && <Loading />}
       {docs &&
         docs.map((doc) => (
+          doc.type !== "CreateEvent" &&
           <div key={doc.id} className="event_card">
             <Event
               url={doc.repo.url}
               doc={doc}
               text={
-                doc.type === "CreateEvent"
-                  ? "created a repository"
-                  : doc.type === "WatchEvent"
+                doc.type === "WatchEvent"
                   ? "starred a repository"
                   : doc.type === "ForkEvent"
                   ? "forked a repository"
