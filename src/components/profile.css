@@ -54,7 +54,8 @@
   align-items: center;
 }
 .repo_no {
-  background-color: grey;
+  background-color: rgb(159, 36, 170);
+  color: #fff;
   border-radius: 10px;
   padding: 0.2em 0.8em;
   font-size: 13px;
